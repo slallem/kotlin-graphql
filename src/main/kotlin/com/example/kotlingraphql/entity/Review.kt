@@ -8,3 +8,4 @@ data class Review(
         var rating: Int,
         var text: String
 )
+

@@ -1,3 +1,8 @@
+
+extend type Query {
+    allReviews: [FullReview]
+}
+
 extend type Query {
     reviews(snackId: ID!): [Review]
 }
@@ -8,6 +13,13 @@ type Review {
     text: String!
 }
 
+type FullReview {
+    snack: Snack!
+    rating: Int
+    text: String!
+}
+
 extend type Mutation {
     newReview(snackId: ID!, rating: Int, text:String!) : Review!
 }
+
